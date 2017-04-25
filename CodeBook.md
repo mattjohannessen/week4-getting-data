@@ -6,6 +6,8 @@ Data set contains 180 rows and 82 columns.  Averages have been computed for each
 
 ### Activity Types
 
+The activityType column contains string values for ActivityTypes provided.
+
 1. WALKING
 2. WALKING_UPSTAIRS
 3. WALKING_DOWNSTAIRS
