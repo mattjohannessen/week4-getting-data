@@ -54,4 +54,7 @@ setWithActivityNames <- merge(setForMeanAndStd, activityLabels,
 secTidySet <- aggregate(. ~subjectId + activityId, setWithActivityNames, mean)
 secTidySet <- secTidySet[order(secTidySet$subjectId, secTidySet$activityId),]
 
+## Add activity label names to keep the data Tidy.
+secTidySet$activitylabel <- factor(secTidySet$activityId, labels = as.character(activityLabels[,2]))
+
 write.table(secTidySet, "secTidySet.txt", row.name=FALSE)
